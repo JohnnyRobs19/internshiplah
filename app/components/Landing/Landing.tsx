@@ -14,8 +14,7 @@ export default function Landing() {
   }, []);
   
   return (
-    <div className="bg-gray-900 text-gray-300 min-h-screen flex flex-col">      {/* Navbar */}
-      <nav className="w-full flex flex-col py-6 px-4 bg-gray-800 sticky top-0 z-50 shadow-md">
+    <div className="bg-gray-900 text-gray-300 min-h-screen flex flex-col">      {/* Navbar */}      <nav className="w-full flex flex-col py-6 px-4 bg-gray-800 sticky top-0 z-50 shadow-md">
         <div className="flex items-center justify-center mb-4">
           <Link href="#home" className="text-4xl font-bold">
             <span className="text-blue-500">Internship</span><span className="text-orange-400">Lah</span>
@@ -27,22 +26,37 @@ export default function Landing() {
           <Link href="#about" className="hover:text-blue-400 transition-colors duration-200 py-1">About Us</Link>
           <Link href="#contribute" className="hover:text-blue-400 transition-colors duration-200 py-1">Contribute</Link>
         </div>
-      </nav>{/* Hero Section */}
-      <section id="home" className="px-6 py-24 min-h-[80vh] flex items-center bg-[#0d1117]">
-        <div className="container mx-auto flex flex-col md:flex-row items-start space-y-6 md:space-y-0">
-          <div className="md:w-1/2 text-center md:text-left md:pr-12">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
-              The right guidance, for the right internship.
-            </h1>
-            <p className="text-lg md:text-xl text-gray-300 mb-6 leading-relaxed">
-              Internship hunting doesn't need to be overwhelming. From resumes to interviews and everything in between — we're building a space where real Malaysian students share honest advice to help you land the right opportunity.
-            </p>
-            <p className="text-base md:text-lg text-gray-400 italic">
-              No fluff. No marketing talk. Just peer-to-peer support, the way it should be.
-            </p>
-          </div>
-          <div className="md:w-1/2 md:pl-12">
-            {/* Empty space for future image or content */}
+      </nav>
+      
+      {/* Hero Section */}
+      <section id="home" className="w-full bg-[#0d1117] text-white min-h-[80vh] flex items-center px-4 sm:px-8 lg:px-12 py-20 md:py-28">
+        <div className="mx-auto max-w-screen-xl w-full">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 md:gap-16">
+            <div className="md:w-3/5 text-center md:text-left">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                The right guidance, for the right internship.
+              </h1>
+              <p className="text-lg md:text-xl text-gray-300 mb-6 leading-relaxed">
+                Internship hunting doesn't need to be overwhelming. From resumes to interviews and everything in between — we're building a space where real Malaysian students share honest advice to help you land the right opportunity.
+              </p>
+              <p className="text-base md:text-lg text-gray-400 italic">
+                No fluff. No marketing talk. Just peer-to-peer support, the way it should be.
+              </p>
+              <div className="mt-10">
+                <Link 
+                  href="#advice" 
+                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-md transition-all duration-300 hover:translate-y-[-2px] hover:shadow-lg"
+                >
+                  Get Started 
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+            <div className="md:w-2/5">
+              {/* Reserved space for future images or graphics */}
+            </div>
           </div>
         </div>
       </section>
