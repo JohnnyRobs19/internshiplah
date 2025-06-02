@@ -100,7 +100,10 @@ export default function Landing({ setCurrentView }: LandingProps) {
 
           {/* Changed from Link to button */}
           <button 
-            onClick={() => setCurrentView('general-advice')} 
+            onClick={() => {
+              setCurrentView('general-advice');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }} 
             className="bg-orange-500 text-white text-lg font-semibold py-3 px-6 rounded-md hover:bg-orange-600 transition"
           >
             Explore More →
@@ -132,7 +135,10 @@ export default function Landing({ setCurrentView }: LandingProps) {
                     on coding interviews, technical assessments, and project portfolios.</p>
                   <div className="flex justify-between items-center">
                     <button 
-                      onClick={() => setCurrentView('cs-details')} 
+                      onClick={() => {
+                        setCurrentView('cs-details');
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }} 
                       className="bg-blue-600 text-white py-2 px-5 rounded-md hover:bg-blue-700 transition flex items-center group"
                     >
                       Learn More 
@@ -161,7 +167,10 @@ export default function Landing({ setCurrentView }: LandingProps) {
                   <p className="text-lg mb-6 flex-grow">Get practical advice for engineering internships, from technical tests to
                     hands-on project experiences and teamwork strategies.</p>
                   <button 
-                    onClick={() => setCurrentView('engineering')} 
+                    onClick={() => {
+                      setCurrentView('engineering');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }} 
                     className="bg-blue-600 text-white py-2 px-5 rounded-md hover:bg-blue-700 transition flex items-center group mt-auto"
                   >
                     Learn More 
@@ -194,7 +203,10 @@ export default function Landing({ setCurrentView }: LandingProps) {
                   <p className="text-lg mb-6 flex-grow">Discover how to master the art of networking, ace corporate interviews, and
                     excel in finance and business-related internships.</p>
                   <button 
-                    onClick={() => setCurrentView('business-finance')} 
+                    onClick={() => {
+                      setCurrentView('business-finance');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }} 
                     className="bg-blue-600 text-white py-2 px-5 rounded-md hover:bg-blue-700 transition flex items-center group mt-auto"
                   >
                     Learn More 
@@ -221,7 +233,10 @@ export default function Landing({ setCurrentView }: LandingProps) {
                   <p className="text-lg mb-6 flex-grow">Understand the requirements for law internships, from legal writing to
                     courtroom exposure, and learn how to stand out in the legal field.</p>
                   <button 
-                    onClick={() => setCurrentView('law-internship')} 
+                    onClick={() => {
+                      setCurrentView('law-internship');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }} 
                     className="bg-blue-600 text-white py-2 px-5 rounded-md hover:bg-blue-700 transition flex items-center group mt-auto"
                   >
                     Learn More 
@@ -255,7 +270,10 @@ export default function Landing({ setCurrentView }: LandingProps) {
           </p>
 
           <button 
-            onClick={() => setCurrentView('about')} 
+            onClick={() => {
+              setCurrentView('about');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
             className="bg-orange-500 text-white text-lg font-semibold py-3 px-6 rounded-md hover:bg-orange-600 transition"
           >
             Find Out More →
@@ -280,7 +298,10 @@ export default function Landing({ setCurrentView }: LandingProps) {
           </p>
 
           <button 
-            onClick={() => setCurrentView('contribute')} 
+            onClick={() => {
+              setCurrentView('contribute');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
             className="bg-orange-500 text-white text-lg font-semibold py-3 px-6 rounded-md hover:bg-orange-600 transition"
           >
             Explore More →
@@ -291,7 +312,7 @@ export default function Landing({ setCurrentView }: LandingProps) {
       {/* Footer */}
       <footer className="py-8 bg-gray-800 text-center text-lg">
         <p>InternshipLah © {currentYear} - <a href="https://github.com/JohnnyRobs19/internshiplah"
-          className="text-blue-400 hover:underline">GitHub</a> | <a href="https://github.com/JohnnyRobs19/InternshiplahWireframe"
+          className="text-blue-400 hover:underline">Website</a> | <a href="https://github.com/JohnnyRobs19/InternshiplahWireframe"
             className="text-blue-400 hover:underline">WireFrame</a>
         </p>
       </footer>
