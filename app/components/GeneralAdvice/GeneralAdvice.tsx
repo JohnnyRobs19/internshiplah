@@ -120,23 +120,25 @@ export default function GeneralAdvice() {
           <ul className="list-disc pl-5 space-y-6">
             <li>
               <h3 className="text-xl font-semibold text-blue-400 mb-2">Create Profiles on Platforms</h3>
-              <p className="mb-2">Register on Handshake, Internshala, or WayUp to discover internship openings tailored to students.</p>
+              <p className="mb-2">Register on LinkedIn, Jobstreet, Indeed Malaysia, Hiredly, or Mudah to discover internship openings tailored to students in Malaysia.</p>
               <p className="text-sm text-gray-400">Sources:</p>
-              <p className="text-sm text-gray-400">https://support.joinhandshake.com/hc/en-us/articles/218693408-Searching-for-Jobs-and-Internships</p>
-              <p className="text-sm text-gray-400">https://chooseapprentice.com/a-comparative-review-of-the-top-internship-platforms</p>
-              <p className="text-sm text-gray-400">https://en.wikipedia.org/wiki/Internshala</p>
+              <p className="text-sm text-gray-400">https://www.jobstreet.com.my/en/job-search/internship-jobs/</p>
+              <p className="text-sm text-gray-400">https://www.hiredly.com/jobs?experience=Internship</p>
+              <p className="text-sm text-gray-400">https://malaysia.indeed.com/Internship-jobs</p>
+              <p className="text-sm text-gray-400">https://www.mudah.my/jobs</p>
+              <p className="text-sm text-gray-400">https://www.linkedin.com/jobs/internship-jobs/</p>
             </li>
             
             <li>
               <h3 className="text-xl font-semibold text-blue-400 mb-2">Set Up Alerts</h3>
-              <p className="mb-2">Enable notifications so you're the first to apply when a relevant role appears.</p>
-              <p className="text-sm text-gray-400">Source: https://support.joinhandshake.com/hc/en-us/articles/218693408-Searching-for-Jobs-and-Internships</p>
+              <p className="mb-2">Enable notifications on these platforms so you're the first to apply when a relevant role appears.</p>
+              <p className="text-sm text-gray-400">Source: Each platform offers job alert settings in your user dashboard/preferences.</p>
             </li>
             
             <li>
               <h3 className="text-xl font-semibold text-blue-400 mb-2">Apply Strategically</h3>
-              <p className="mb-2">Focus on internships that match your goals and personalize each application.</p>
-              <p className="text-sm text-gray-400">Source: https://chooseapprentice.com/a-comparative-review-of-the-top-internship-platforms</p>
+              <p className="mb-2">Focus on internships that match your goals and personalize each application to the company and role.</p>
+              <p className="text-sm text-gray-400">Source: https://www.jobstreet.com.my/en/career-insights/prepare/how-to-write-an-internship-resume-and-cover-letter/</p>
             </li>
           </ul>
         </section>
