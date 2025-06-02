@@ -136,7 +136,7 @@ export default function GeneralAdvice() {
             <ul className="list-disc pl-5 space-y-6 mb-6">
               <li>
                 <h3 className="text-xl font-semibold text-blue-400 mb-2">Create Profiles on Platforms</h3>
-                <p className="mb-2">Register on LinkedIn, Jobstreet, Indeed Malaysia, Hiredly, or Mudah to discover internship openings tailored to students in Malaysia.</p>
+                <p className="mb-2">Register on Kabel, LinkedIn, Jobstreet, Indeed Malaysia, Hiredly, or Mudah to discover internship openings tailored to students in Malaysia.</p>
               </li>
               
               <li>
@@ -157,6 +157,7 @@ export default function GeneralAdvice() {
               <p className="text-sm text-gray-400">https://malaysia.indeed.com/Internship-jobs</p>
               <p className="text-sm text-gray-400">https://www.mudah.my/jobs</p>
               <p className="text-sm text-gray-400">https://www.linkedin.com/jobs/internship-jobs/</p>
+              <p className="text-sm text-gray-400">https://kabel.web.app/</p>
               <p className="text-sm text-gray-400">https://www.jobstreet.com.my/en/career-insights/prepare/how-to-write-an-internship-resume-and-cover-letter/</p>
             </div>
           </div>
