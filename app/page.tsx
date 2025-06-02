@@ -4,6 +4,7 @@ import { useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Landing from "./components/Landing/Landing";
 import GeneralAdvice from "./components/GeneralAdvice/GeneralAdvice";
+import AboutUs from "./components/AboutUs/AboutUs";
 
 export default function Home() {
   const [currentView, setCurrentView] = useState("landing");
@@ -15,6 +16,8 @@ export default function Home() {
       {currentView === "landing" && <Landing setCurrentView={setCurrentView} />}
 
       {currentView === "general-advice" && <GeneralAdvice />}
+      
+      {currentView === "about" && <AboutUs />}
 
       {/* Add more conditional sections as needed */}
       {/* For example: */}
