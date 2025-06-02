@@ -32,7 +32,7 @@ export default function GeneralAdvice() {
             </ul>
             
             <div className="border-t border-gray-700 pt-4 mt-6">
-              <p className="text-sm text-gray-400">Sources:</p>
+              <p className="text-sm text-gray-400">Source:</p>
               <p className="text-sm text-gray-400">https://www.linkedin.com/pulse/looking-internship-start-here-rebecca-lubelski</p>
             </div>
           </div>
