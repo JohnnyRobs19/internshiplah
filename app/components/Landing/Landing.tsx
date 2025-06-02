@@ -20,7 +20,7 @@ export default function Landing({ setCurrentView }: LandingProps) {
   return (
     <div className="bg-gray-900 text-gray-300 min-h-screen flex flex-col">
       {/* Hero Section */}
-      <section id="home" className="w-full bg-[#0d1117] text-white min-h-[80vh] flex items-center px-4 sm:px-8 lg:px-12 py-20 md:py-28">
+      <section id="home" className="w-full bg-[#0d1117] text-white min-h-[80vh] flex items-center px-4 sm:px-8 lg:px-12 py-20 md:py-28 scroll-mt-20">
         <div className="mx-auto max-w-screen-xl w-full">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 md:gap-16">
             <div className="md:w-3/5 text-center md:text-left">
@@ -33,17 +33,6 @@ export default function Landing({ setCurrentView }: LandingProps) {
               <p className="text-base md:text-lg text-gray-400 italic">
                 No fluff. No marketing talk. Just peer-to-peer support, the way it should be.
               </p>
-              <div className="mt-10">
-                <button 
-                  onClick={() => setCurrentView('advice')} 
-                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-md transition-all duration-300 hover:translate-y-[-2px] hover:shadow-lg"
-                >
-                  Get Started 
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
-                </button>
-              </div>
             </div>            <div className="md:w-2/5 relative hidden md:block">
               <div className="relative w-full aspect-square max-w-md mx-auto overflow-hidden rounded-lg shadow-xl">
                 <Image 
@@ -64,7 +53,7 @@ export default function Landing({ setCurrentView }: LandingProps) {
       </section>
 
       {/* Philosophy Section */}
-      <section id="philosophy" className="py-24 px-16 bg-gray-800 text-gray-200">
+      <section id="philosophy" className="py-24 px-16 bg-gray-800 text-gray-200 scroll-mt-20">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-5xl font-bold text-orange-400 mb-6">Our Philosophy</h2>
 
@@ -90,7 +79,7 @@ export default function Landing({ setCurrentView }: LandingProps) {
       </section>
 
       {/* General Advice Preview */}
-      <section id="advice" className="py-24 px-16 bg-gray-900 text-gray-200">
+      <section id="advice" className="py-24 px-16 bg-gray-900 text-gray-200 scroll-mt-20">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-5xl font-bold text-blue-400 mb-6">General Advice</h2>
 
@@ -118,7 +107,7 @@ export default function Landing({ setCurrentView }: LandingProps) {
           </button>
         </div>
       </section>      {/* Specific Advice Preview */}
-      <section id="specific" className="py-24 px-8 md:px-16 bg-gray-900 text-gray-200">
+      <section id="specific" className="py-24 px-8 md:px-16 bg-gray-900 text-gray-200 scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl font-bold text-orange-400 mb-12 text-center">Specific Advice</h2>
           
@@ -248,7 +237,7 @@ export default function Landing({ setCurrentView }: LandingProps) {
       </section>
 
       {/* About Us Section */}
-      <section id="about" className="py-24 px-16 bg-gray-800 text-gray-200">
+      <section id="about" className="py-24 px-16 bg-gray-800 text-gray-200 scroll-mt-20">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-5xl font-bold text-orange-400 mb-6">About Us</h2>
 
@@ -275,7 +264,7 @@ export default function Landing({ setCurrentView }: LandingProps) {
       </section>
 
       {/* How to Contribute Section */}
-      <section id="contribute" className="py-24 px-16 bg-gray-900 text-gray-200">
+      <section id="contribute" className="py-24 px-16 bg-gray-900 text-gray-200 scroll-mt-20">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-5xl font-bold text-orange-400 mb-6">How to Contribute</h2>
 
