@@ -68,6 +68,42 @@ export default function Navbar({ currentView, setCurrentView }: NavbarProps) {
               Contribute
             </button>
           </>
+        ) : currentView === 'about' ? (
+          <>
+            <button
+              onClick={() => {
+                setCurrentView('landing');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="hover:text-blue-400 transition-colors duration-200 py-1"
+            >
+              Home
+            </button>
+            <button
+              onClick={() => handleNavigation('philosophy')}
+              className="hover:text-blue-400 transition-colors duration-200 py-1"
+            >
+              Our Philosophy
+            </button>
+            <button
+              onClick={() => handleNavigation('advice')}
+              className="hover:text-blue-400 transition-colors duration-200 py-1"
+            >
+              General Advice
+            </button>
+            <button
+              onClick={() => handleNavigation('specific')}
+              className="hover:text-blue-400 transition-colors duration-200 py-1"
+            >
+              Specific Advice
+            </button>
+            <button
+              onClick={() => handleNavigation('contribute')}
+              className="hover:text-blue-400 transition-colors duration-200 py-1"
+            >
+              Contribute
+            </button>
+          </>
         ) : (
           <>
             <button
