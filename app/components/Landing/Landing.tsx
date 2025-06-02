@@ -28,41 +28,22 @@ export default function Landing() {
           <Link href="#contribute" className="hover:text-blue-400 transition-colors duration-200 py-1">Contribute</Link>
         </div>
       </nav>{/* Hero Section */}
-      <section id="home" className="py-32 min-h-[80vh] flex items-center">
-        <div className="container mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-12">
-          <div className="md:w-1/2 text-left">
-            <h1 className="text-5xl md:text-6xl font-bold mb-4">
-              <span className="text-gray-100">Your Internship Journey</span>
-              <span className="text-3xl text-orange-400 font-normal mt-1 block">starts here</span>
+      <section id="home" className="px-6 py-24 min-h-[80vh] flex items-center bg-[#0d1117]">
+        <div className="container mx-auto flex flex-col md:flex-row items-start space-y-6 md:space-y-0">
+          <div className="md:w-1/2 text-center md:text-left md:pr-12">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
+              The right guidance, for the right internship.
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8">
-              Navigate your career path with confidence through practical advice from students who've been there.
+            <p className="text-lg md:text-xl text-gray-300 mb-6 leading-relaxed">
+              Internship hunting doesn't need to be overwhelming. From resumes to interviews and everything in between — we're building a space where real Malaysian students share honest advice to help you land the right opportunity.
+            </p>
+            <p className="text-base md:text-lg text-gray-400 italic">
+              No fluff. No marketing talk. Just peer-to-peer support, the way it should be.
             </p>
           </div>
-          <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
-            <div className="relative w-full max-w-md aspect-square rounded-lg overflow-hidden shadow-2xl">
-              <Image 
-                src="/assets/fsktm.jpg"
-                alt="Students collaborating"
-                layout="fill"
-                objectFit="cover"
-                className="rounded-lg"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900 p-6">
-                <blockquote className="italic text-white">
-                  "InternshipLah helped me land my dream tech internship!"
-                  <footer className="text-sm text-gray-300 mt-2">— Min Hui, Computer Science Student</footer>
-                </blockquote>
-              </div>
-            </div>
+          <div className="md:w-1/2 md:pl-12">
+            {/* Empty space for future image or content */}
           </div>
-        </div>
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <a href="#philosophy" className="text-white opacity-70 hover:opacity-100 transition">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
-          </a>
         </div>
       </section>
 
