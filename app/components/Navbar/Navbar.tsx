@@ -38,6 +38,12 @@ export default function Navbar({ currentView, setCurrentView }: NavbarProps) {
         {currentView === 'landing' ? (
           <>
             <button
+              onClick={() => handleNavigation('philosophy')}
+              className="hover:text-blue-400 transition-colors duration-200 py-1"
+            >
+              Our Philosophy
+            </button>
+            <button
               onClick={() => handleNavigation('advice')}
               className="hover:text-blue-400 transition-colors duration-200 py-1"
             >
@@ -72,6 +78,12 @@ export default function Navbar({ currentView, setCurrentView }: NavbarProps) {
               className="hover:text-blue-400 transition-colors duration-200 py-1"
             >
               Home
+            </button>
+            <button
+              onClick={() => handleNavigation('philosophy')}
+              className="hover:text-blue-400 transition-colors duration-200 py-1"
+            >
+              Our Philosophy
             </button>
             <button
               onClick={() => handleNavigation('specific')}
