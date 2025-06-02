@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Landing from "./components/Landing/Landing";
 import GeneralAdvice from "./components/GeneralAdvice/GeneralAdvice";
 import AboutUs from "./components/AboutUs/AboutUs";
+import Contribute from "./components/Contribute/Contribute";
 
 export default function Home() {
   const [currentView, setCurrentView] = useState("landing");
@@ -17,7 +18,9 @@ export default function Home() {
 
       {currentView === "general-advice" && <GeneralAdvice />}
       
-      {currentView === "about" && <AboutUs />}
+      {currentView === "about" && <AboutUs setCurrentView={setCurrentView} />}
+      
+      {currentView === "contribute" && <Contribute />}
 
       {/* Add more conditional sections as needed */}
       {/* For example: */}

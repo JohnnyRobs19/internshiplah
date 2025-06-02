@@ -5,7 +5,11 @@ import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
-export default function AboutUs() {
+interface AboutUsProps {
+  setCurrentView?: React.Dispatch<React.SetStateAction<string>>;
+}
+
+export default function AboutUs({ setCurrentView }: AboutUsProps) {
   const teamMembers = [
     {
       name: "Chiew Ching Yee",
@@ -66,6 +70,13 @@ export default function AboutUs() {
       transition: {
         staggerChildren: 0.2
       }
+    }
+  };
+
+  const handleGetInTouch = () => {
+    if (setCurrentView) {
+      setCurrentView('contribute');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
@@ -217,6 +228,7 @@ export default function AboutUs() {
             className="bg-blue-600 text-white py-3 px-10 rounded-lg text-lg font-semibold shadow-lg hover:bg-blue-700 hover:shadow-blue-500/20 hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:translate-y-[-2px]"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
+            onClick={handleGetInTouch}
           >
             Get In Touch
           </motion.button>
