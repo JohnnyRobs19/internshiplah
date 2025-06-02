@@ -53,9 +53,20 @@ export default function Landing() {
                   </svg>
                 </Link>
               </div>
-            </div>
-            <div className="md:w-2/5">
-              {/* Reserved space for future images or graphics */}
+            </div>            <div className="md:w-2/5 relative hidden md:block">
+              <div className="relative w-full aspect-square max-w-md mx-auto overflow-hidden rounded-lg shadow-xl">
+                <Image 
+                  src="/assets/image.jpg"
+                  alt="Students preparing for internships"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-lg"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-gray-900/80 to-transparent">
+                </div>
+              </div>
             </div>
           </div>
         </div>
