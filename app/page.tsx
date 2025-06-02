@@ -18,7 +18,7 @@ export default function Home() {
 
       {currentView === "general-advice" && <GeneralAdvice />}
       
-      {currentView === "about" && <AboutUs />}
+      {currentView === "about" && <AboutUs setCurrentView={setCurrentView} />}
       
       {currentView === "contribute" && <Contribute />}
 
