@@ -1,9 +1,14 @@
 "use client";
 
-import Link from 'next/link';
+import { ReactNode } from 'react';
 
-export default function Navbar({ currentView, setCurrentView }) {
-  const handleNavigation = (sectionId) => {
+interface NavbarProps {
+  currentView: string;
+  setCurrentView: React.Dispatch<React.SetStateAction<string>>;
+}
+
+export default function Navbar({ currentView, setCurrentView }: NavbarProps) {
+  const handleNavigation = (sectionId: string): void => {
     if (currentView !== 'landing') {
       setCurrentView('landing');
       // Add a small delay to ensure the landing page is rendered before scrolling

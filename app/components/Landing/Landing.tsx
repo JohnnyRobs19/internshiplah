@@ -4,7 +4,12 @@ import Image from 'next/legacy/image';
 import { useEffect } from 'react';
 import { initSmoothScroll } from './smoothScroll';
 
-export default function Landing({ setCurrentView }) {
+// Add interface for component props
+interface LandingProps {
+  setCurrentView: React.Dispatch<React.SetStateAction<string>>;
+}
+
+export default function Landing({ setCurrentView }: LandingProps) {
   const currentYear = new Date().getFullYear();
   
   // Initialize smooth scrolling after component mounts

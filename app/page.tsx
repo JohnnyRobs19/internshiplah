@@ -12,11 +12,16 @@ export default function Home() {
     <div className="bg-gray-900 text-gray-300 min-h-screen flex flex-col">
       <Navbar currentView={currentView} setCurrentView={setCurrentView} />
 
-      {currentView === "landing" ? (
-        <Landing setCurrentView={setCurrentView} />
-      ) : currentView === "general-advice" ? (
-        <GeneralAdvice />
-      ) : null}
+      {currentView === "landing" && <Landing setCurrentView={setCurrentView} />}
+
+      {currentView === "general-advice" && <GeneralAdvice />}
+
+      {/* Add more conditional sections as needed */}
+      {/* For example: */}
+      {/* {currentView === 'cs-details' && <CsDetails />} */}
+      {/* {currentView === 'engineering' && <Engineering />} */}
+      {/* {currentView === 'business-finance' && <BusinessFinance />} */}
+      {/* {currentView === 'law-internship' && <LawInternship />} */}
     </div>
   );
 }
