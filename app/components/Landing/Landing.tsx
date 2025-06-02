@@ -1,11 +1,15 @@
 "use client";
 
-import Link from 'next/link';
 import Image from 'next/legacy/image';
 import { useEffect } from 'react';
 import { initSmoothScroll } from './smoothScroll';
 
-export default function Landing() {
+// Add interface for component props
+interface LandingProps {
+  setCurrentView: React.Dispatch<React.SetStateAction<string>>;
+}
+
+export default function Landing({ setCurrentView }: LandingProps) {
   const currentYear = new Date().getFullYear();
   
   // Initialize smooth scrolling after component mounts
@@ -14,22 +18,9 @@ export default function Landing() {
   }, []);
   
   return (
-    <div className="bg-gray-900 text-gray-300 min-h-screen flex flex-col">      {/* Navbar */}      <nav className="w-full flex flex-col py-6 px-4 bg-gray-800 sticky top-0 z-50 shadow-md">
-        <div className="flex items-center justify-center mb-4">
-          <Link href="#home" className="text-4xl font-bold">
-            <span className="text-blue-500">Internship</span><span className="text-orange-400">Lah</span>
-          </Link>
-        </div>
-        <div className="flex justify-center space-x-8 md:space-x-16 text-lg">
-          <Link href="#advice" className="hover:text-blue-400 transition-colors duration-200 py-1">General Advice</Link>
-          <Link href="#specific" className="hover:text-blue-400 transition-colors duration-200 py-1">Specific Advice</Link>
-          <Link href="#about" className="hover:text-blue-400 transition-colors duration-200 py-1">About Us</Link>
-          <Link href="#contribute" className="hover:text-blue-400 transition-colors duration-200 py-1">Contribute</Link>
-        </div>
-      </nav>
-      
+    <div className="bg-gray-900 text-gray-300 min-h-screen flex flex-col">
       {/* Hero Section */}
-      <section id="home" className="w-full bg-[#0d1117] text-white min-h-[80vh] flex items-center px-4 sm:px-8 lg:px-12 py-20 md:py-28">
+      <section id="home" className="w-full bg-[#0d1117] text-white min-h-[80vh] flex items-center px-4 sm:px-8 lg:px-12 py-20 md:py-28 scroll-mt-20">
         <div className="mx-auto max-w-screen-xl w-full">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8 md:gap-16">
             <div className="md:w-3/5 text-center md:text-left">
@@ -42,17 +33,6 @@ export default function Landing() {
               <p className="text-base md:text-lg text-gray-400 italic">
                 No fluff. No marketing talk. Just peer-to-peer support, the way it should be.
               </p>
-              <div className="mt-10">
-                <Link 
-                  href="#advice" 
-                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-md transition-all duration-300 hover:translate-y-[-2px] hover:shadow-lg"
-                >
-                  Get Started 
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
-                </Link>
-              </div>
             </div>            <div className="md:w-2/5 relative hidden md:block">
               <div className="relative w-full aspect-square max-w-md mx-auto overflow-hidden rounded-lg shadow-xl">
                 <Image 
@@ -73,7 +53,7 @@ export default function Landing() {
       </section>
 
       {/* Philosophy Section */}
-      <section id="philosophy" className="py-24 px-16 bg-gray-800 text-gray-200">
+      <section id="philosophy" className="py-24 px-16 bg-gray-800 text-gray-200 scroll-mt-20">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-5xl font-bold text-orange-400 mb-6">Our Philosophy</h2>
 
@@ -99,7 +79,7 @@ export default function Landing() {
       </section>
 
       {/* General Advice Preview */}
-      <section id="advice" className="py-24 px-16 bg-gray-900 text-gray-200">
+      <section id="advice" className="py-24 px-16 bg-gray-900 text-gray-200 scroll-mt-20">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-5xl font-bold text-blue-400 mb-6">General Advice</h2>
 
@@ -118,15 +98,19 @@ export default function Landing() {
             Discover what it takes to stand out and secure that dream internship.
           </p>
 
-          <Link 
-            href="/general-advice" 
+          {/* Changed from Link to button */}
+          <button 
+            onClick={() => {
+              setCurrentView('general-advice');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }} 
             className="bg-orange-500 text-white text-lg font-semibold py-3 px-6 rounded-md hover:bg-orange-600 transition"
           >
             Explore More →
-          </Link>
+          </button>
         </div>
       </section>      {/* Specific Advice Preview */}
-      <section id="specific" className="py-24 px-8 md:px-16 bg-gray-900 text-gray-200">
+      <section id="specific" className="py-24 px-8 md:px-16 bg-gray-900 text-gray-200 scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-5xl font-bold text-orange-400 mb-12 text-center">Specific Advice</h2>
           
@@ -150,15 +134,18 @@ export default function Landing() {
                   <p className="text-lg mb-6 flex-grow">Navigate the fast-paced world of technology internships with essential tips
                     on coding interviews, technical assessments, and project portfolios.</p>
                   <div className="flex justify-between items-center">
-                    <Link 
-                      href="/cs-details" 
+                    <button 
+                      onClick={() => {
+                        setCurrentView('cs-details');
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }} 
                       className="bg-blue-600 text-white py-2 px-5 rounded-md hover:bg-blue-700 transition flex items-center group"
                     >
                       Learn More 
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                       </svg>
-                    </Link>
+                    </button>
                     <span className="text-blue-300 text-sm">Popular Choice</span>
                   </div>
                 </div>
@@ -179,15 +166,18 @@ export default function Landing() {
                   <h3 className="text-2xl font-semibold text-blue-400 mb-3">Engineering</h3>
                   <p className="text-lg mb-6 flex-grow">Get practical advice for engineering internships, from technical tests to
                     hands-on project experiences and teamwork strategies.</p>
-                  <Link 
-                    href="/engineering" 
+                  <button 
+                    onClick={() => {
+                      setCurrentView('engineering');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }} 
                     className="bg-blue-600 text-white py-2 px-5 rounded-md hover:bg-blue-700 transition flex items-center group mt-auto"
                   >
                     Learn More 
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>
@@ -212,15 +202,18 @@ export default function Landing() {
                   <h3 className="text-2xl font-semibold text-blue-400 mb-3">Business & Finance</h3>
                   <p className="text-lg mb-6 flex-grow">Discover how to master the art of networking, ace corporate interviews, and
                     excel in finance and business-related internships.</p>
-                  <Link 
-                    href="/business-finance" 
+                  <button 
+                    onClick={() => {
+                      setCurrentView('business-finance');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }} 
                     className="bg-blue-600 text-white py-2 px-5 rounded-md hover:bg-blue-700 transition flex items-center group mt-auto"
                   >
                     Learn More 
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
-                  </Link>
+                  </button>
                 </div>
               </div>
 
@@ -239,15 +232,18 @@ export default function Landing() {
                   <h3 className="text-2xl font-semibold text-blue-400 mb-3">Law</h3>
                   <p className="text-lg mb-6 flex-grow">Understand the requirements for law internships, from legal writing to
                     courtroom exposure, and learn how to stand out in the legal field.</p>
-                  <Link 
-                    href="/law-internship" 
+                  <button 
+                    onClick={() => {
+                      setCurrentView('law-internship');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }} 
                     className="bg-blue-600 text-white py-2 px-5 rounded-md hover:bg-blue-700 transition flex items-center group mt-auto"
                   >
                     Learn More 
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>
@@ -256,7 +252,7 @@ export default function Landing() {
       </section>
 
       {/* About Us Section */}
-      <section id="about" className="py-24 px-16 bg-gray-800 text-gray-200">
+      <section id="about" className="py-24 px-16 bg-gray-800 text-gray-200 scroll-mt-20">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-5xl font-bold text-orange-400 mb-6">About Us</h2>
 
@@ -273,17 +269,20 @@ export default function Landing() {
             dreams into reality.
           </p>
 
-          <Link 
-            href="/about" 
+          <button 
+            onClick={() => {
+              setCurrentView('about');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
             className="bg-orange-500 text-white text-lg font-semibold py-3 px-6 rounded-md hover:bg-orange-600 transition"
           >
             Find Out More →
-          </Link>
+          </button>
         </div>
       </section>
 
       {/* How to Contribute Section */}
-      <section id="contribute" className="py-24 px-16 bg-gray-900 text-gray-200">
+      <section id="contribute" className="py-24 px-16 bg-gray-900 text-gray-200 scroll-mt-20">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-5xl font-bold text-orange-400 mb-6">How to Contribute</h2>
 
@@ -298,19 +297,22 @@ export default function Landing() {
             all.
           </p>
 
-          <Link 
-            href="/contribute" 
+          <button 
+            onClick={() => {
+              setCurrentView('contribute');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
             className="bg-orange-500 text-white text-lg font-semibold py-3 px-6 rounded-md hover:bg-orange-600 transition"
           >
             Explore More →
-          </Link>
+          </button>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="py-8 bg-gray-800 text-center text-lg">
         <p>InternshipLah © {currentYear} - <a href="https://github.com/JohnnyRobs19/internshiplah"
-          className="text-blue-400 hover:underline">GitHub</a> | <a href="https://github.com/JohnnyRobs19/InternshiplahWireframe"
+          className="text-blue-400 hover:underline">Website</a> | <a href="https://github.com/JohnnyRobs19/InternshiplahWireframe"
             className="text-blue-400 hover:underline">WireFrame</a>
         </p>
       </footer>
