@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function GeneralAdvice() {
   return (
-    <div className="bg-gray-900 text-gray-300 min-h-screen py-16 px-4 sm:px-6 lg:px-8">
+    <div className="bg-gray-900 text-gray-300 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-blue-500 mb-12 text-center">General Advice for Internships</h1>
         

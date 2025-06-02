@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/legacy/image';
 import { useEffect } from 'react';
 import { initSmoothScroll } from './smoothScroll';
+import Navbar from '../Navbar/Navbar';
 
 export default function Landing() {
   const currentYear = new Date().getFullYear();
@@ -14,19 +15,8 @@ export default function Landing() {
   }, []);
   
   return (
-    <div className="bg-gray-900 text-gray-300 min-h-screen flex flex-col">      {/* Navbar */}      <nav className="w-full flex flex-col py-6 px-4 bg-gray-800 sticky top-0 z-50 shadow-md">
-        <div className="flex items-center justify-center mb-4">
-          <Link href="#home" className="text-4xl font-bold">
-            <span className="text-blue-500">Internship</span><span className="text-orange-400">Lah</span>
-          </Link>
-        </div>
-        <div className="flex justify-center space-x-8 md:space-x-16 text-lg">
-          <Link href="#advice" className="hover:text-blue-400 transition-colors duration-200 py-1">General Advice</Link>
-          <Link href="#specific" className="hover:text-blue-400 transition-colors duration-200 py-1">Specific Advice</Link>
-          <Link href="#about" className="hover:text-blue-400 transition-colors duration-200 py-1">About Us</Link>
-          <Link href="#contribute" className="hover:text-blue-400 transition-colors duration-200 py-1">Contribute</Link>
-        </div>
-      </nav>
+    <div className="bg-gray-900 text-gray-300 min-h-screen flex flex-col">
+      <Navbar />
       
       {/* Hero Section */}
       <section id="home" className="w-full bg-[#0d1117] text-white min-h-[80vh] flex items-center px-4 sm:px-8 lg:px-12 py-20 md:py-28">
