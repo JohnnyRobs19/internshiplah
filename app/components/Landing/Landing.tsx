@@ -93,10 +93,9 @@ export default function Landing() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Computer Science */}
-            <div className="bg-gray-800 rounded-lg overflow-hidden">
-              <div className="relative w-full h-48">
+            <div className="bg-gray-800 rounded-lg overflow-hidden">              <div className="relative w-full h-48">
                 <Image 
-                  src="/assets/fsktm.png" 
+                  src="/assets/fsktm.jpg" 
                   alt="Computer Science" 
                   layout="fill"
                   objectFit="cover"
