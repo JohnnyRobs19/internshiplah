@@ -6,6 +6,7 @@ import Landing from "./components/Landing/Landing";
 import GeneralAdvice from "./components/GeneralAdvice/GeneralAdvice";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Contribute from "./components/Contribute/Contribute";
+import ComputerScience from "./components/ComputerScience/ComputerScience";
 
 export default function Home() {
   const [currentView, setCurrentView] = useState("landing");
@@ -19,12 +20,12 @@ export default function Home() {
       {currentView === "general-advice" && <GeneralAdvice />}
       
       {currentView === "about" && <AboutUs setCurrentView={setCurrentView} />}
-      
-      {currentView === "contribute" && <Contribute />}
+        {currentView === "contribute" && <Contribute />}
+
+      {currentView === "cs-details" && <ComputerScience />}
 
       {/* Add more conditional sections as needed */}
       {/* For example: */}
-      {/* {currentView === 'cs-details' && <CsDetails />} */}
       {/* {currentView === 'engineering' && <Engineering />} */}
       {/* {currentView === 'business-finance' && <BusinessFinance />} */}
       {/* {currentView === 'law-internship' && <LawInternship />} */}

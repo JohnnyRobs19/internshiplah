@@ -33,7 +33,7 @@ export default function Landing({ setCurrentView }: LandingProps) {
               <p className="text-base md:text-lg text-gray-400 italic">
                 No fluff. No marketing talk. Just peer-to-peer support, the way it should be.
               </p>
-            </div>            <div className="md:w-2/5 relative hidden md:block">
+            </div>            <div className="md:w-2/5 w-full mt-8 md:mt-0">
               <div className="relative w-full aspect-square max-w-md mx-auto overflow-hidden rounded-lg shadow-xl">
                 <Image 
                   src="/assets/image.jpg"
