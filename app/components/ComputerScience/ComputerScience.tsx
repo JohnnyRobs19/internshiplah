@@ -19,8 +19,7 @@ import {
   BookOpen,
   Target,
   Lightbulb,
-  Star,
-  FileCheck
+  Star
 } from 'lucide-react';
 
 // Reusable AdviceBlock component
@@ -119,31 +118,7 @@ const TableOfContents = () => {
   );
 };
 
-// Floating CTA Button
-const FloatingCTA = () => {
-  const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsVisible(window.scrollY > 500);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  return (
-    <div className={`fixed bottom-8 right-8 z-50 transition-all duration-300 ${
-      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
-    }`}>
-      <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-4 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3 font-semibold">
-        <FileCheck size={20} />
-        Start Your Resume
-        <ExternalLink size={16} />
-      </button>
-    </div>
-  );
-};
 
 // Scroll to Top Button
 const ScrollToTop = () => {
@@ -176,12 +151,8 @@ const ScrollToTop = () => {
 
 export default function ComputerScience() {
   return (
-    <div className="bg-gray-900 text-gray-300 py-16 px-4 sm:px-6 lg:px-8 relative">
-      {/* Table of Contents */}
+    <div className="bg-gray-900 text-gray-300 py-16 px-4 sm:px-6 lg:px-8 relative">      {/* Table of Contents */}
       <TableOfContents />
-      
-      {/* Floating CTA */}
-      <FloatingCTA />
       
       {/* Scroll to Top */}
       <ScrollToTop />
