@@ -91,7 +91,7 @@ const TableOfContents = () => {
   };
 
   return (
-    <div className="hidden lg:block fixed right-8 top-1/2 transform -translate-y-1/2 z-40">
+    <div className="hidden lg:block fixed right-4 top-1/2 transform -translate-y-1/2 z-40">
       <div className="bg-slate-800 rounded-2xl shadow-xl border border-gray-700/50 p-4 max-w-xs">
         <h3 className="text-sm font-semibold text-blue-400 mb-4 flex items-center gap-2">
           <BookOpen size={16} />
@@ -151,13 +151,14 @@ const ScrollToTop = () => {
 
 export default function ComputerScience() {
   return (
-    <div className="bg-gray-900 text-gray-300 py-16 px-4 sm:px-6 lg:px-8 relative">      {/* Table of Contents */}
+    <div className="bg-gray-900 text-gray-300 py-16 px-4 sm:px-6 lg:px-8 relative flex justify-center">
+      {/* Table of Contents */}
       <TableOfContents />
       
       {/* Scroll to Top */}
       <ScrollToTop />
 
-      <div className="max-w-6xl mx-auto lg:mr-80">
+      <div className="w-full max-w-5xl lg:max-w-4xl xl:max-w-5xl">
         <div className="text-center mb-16">
           <div className="flex justify-center mb-6">
             <div className="p-4 bg-blue-500/10 rounded-2xl border border-blue-500/20">
