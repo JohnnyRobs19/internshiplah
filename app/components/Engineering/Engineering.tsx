@@ -181,23 +181,25 @@ export default function Engineering() {
         >
           <p className="text-xl mb-6">Electrical engineering internships give you direct experience in:</p>
           
-          <div className="grid md:grid-cols-2 gap-4 mb-6">
-            <div className="flex items-center gap-3 p-4 bg-blue-500/10 rounded-lg border border-blue-500/20">
+          <div className="grid md:grid-cols-2 gap-4 mb-6">            <div className="flex items-center gap-3 p-4 bg-blue-500/10 rounded-lg border border-blue-500/20">
               <Wrench size={20} className="text-blue-400" />
-              <span className="text-lg">Circuit design, PCB layout, and embedded systems</span>
+              <span className="text-lg">Circuit design, PCB (Printed Circuit Board) layout, and embedded systems</span>
             </div>
             <div className="flex items-center gap-3 p-4 bg-green-500/10 rounded-lg border border-green-500/20">
               <Zap size={20} className="text-green-400" />
               <span className="text-lg">Power distribution and signal processing</span>
             </div>
-          </div>
-
-          <div className="bg-blue-900/20 p-6 rounded-xl mb-6 border-l-4 border-blue-400">
+          </div>          <div className="bg-blue-900/20 p-6 rounded-xl mb-6 border-l-4 border-blue-400">
             <h3 className="text-xl font-semibold text-blue-400 mb-3 flex items-center gap-2">
               <Target size={20} />
               Tools commonly used:
             </h3>
-            <p className="text-lg mb-4">MATLAB, Simulink, LabVIEW, PSpice</p>
+            <div className="space-y-2 mb-4">
+              <p className="text-lg"><strong>MATLAB</strong> - Mathematical computing software for analysis and simulation</p>
+              <p className="text-lg"><strong>Simulink</strong> - Graphical programming environment for modeling dynamic systems</p>
+              <p className="text-lg"><strong>LabVIEW</strong> - Laboratory Virtual Instrument Engineering Workbench for data acquisition</p>
+              <p className="text-lg"><strong>PSpice</strong> - Circuit simulation software for electronic design</p>
+            </div>
             
             <h3 className="text-xl font-semibold text-blue-400 mb-3 flex items-center gap-2">
               <BookOpen size={20} />
@@ -248,22 +250,24 @@ export default function Engineering() {
               <Settings size={20} className="text-purple-400" />
               <span className="text-lg">Food processing factories</span>
             </div>
-          </div>
-
-          <div className="space-y-4 mb-6">
+          </div>          <div className="space-y-4 mb-6">
             <div className="p-4 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-lg border border-blue-500/20">
               <span className="text-lg font-semibold text-blue-400 flex items-center gap-2 mb-2">
                 <Wrench size={18} />
                 Tools commonly used:
               </span>
-              <span className="text-lg">Aspen Plus, HYSYS, MATLAB</span>
+              <div className="space-y-1 ml-6">
+                <p className="text-lg"><strong>Aspen Plus</strong> - Process simulation software for chemical plants</p>
+                <p className="text-lg"><strong>HYSYS</strong> - Process modeling software for oil, gas, and chemical industries</p>
+                <p className="text-lg"><strong>MATLAB</strong> - Mathematical computing for process analysis</p>
+              </div>
             </div>
             <div className="p-4 bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-lg border border-green-500/20">
               <span className="text-lg font-semibold text-green-400 flex items-center gap-2 mb-2">
                 <Target size={18} />
                 Common intern tasks:
               </span>
-              <span className="text-lg">Process simulation, quality assurance, safety compliance, and lab testing</span>
+              <span className="text-lg">Process simulation, quality assurance (QA), safety compliance, and lab testing</span>
             </div>
           </div>
 
