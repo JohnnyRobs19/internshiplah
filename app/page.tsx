@@ -9,6 +9,7 @@ import Contribute from "./components/Contribute/Contribute";
 import ComputerScience from "./components/ComputerScience/ComputerScience";
 import Engineering from "./components/Engineering/Engineering";
 import Business from "./components/Business/Business";
+import Law from "./components/Law/Law";
 
 export default function Home() {
   const [currentView, setCurrentView] = useState("landing");
@@ -22,14 +23,11 @@ export default function Home() {
       {currentView === "general-advice" && <GeneralAdvice />}
       
       {currentView === "about" && <AboutUs setCurrentView={setCurrentView} />}
-        {currentView === "contribute" && <Contribute />}      {currentView === "cs-details" && <ComputerScience />}      {currentView === "engineering" && <Engineering />}
+        {currentView === "contribute" && <Contribute />}      {currentView === "cs-details" && <ComputerScience />}      {currentView === "engineering" && <Engineering />}      {currentView === "business-finance" && <Business />}
 
-      {currentView === "business-finance" && <Business />}
+      {currentView === "law-internship" && <Law />}
 
       {/* Add more conditional sections as needed */}
-      {/* For example: */}
-      {/* {currentView === 'business-finance' && <BusinessFinance />} */}
-      {/* {currentView === 'law-internship' && <LawInternship />} */}
     </div>
   );
 }
