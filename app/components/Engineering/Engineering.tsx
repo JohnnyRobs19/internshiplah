@@ -183,11 +183,11 @@ export default function Engineering() {
           
           <div className="grid md:grid-cols-2 gap-4 mb-6">            <div className="flex items-center gap-3 p-4 bg-blue-500/10 rounded-lg border border-blue-500/20">
               <Wrench size={20} className="text-blue-400" />
-              <span className="text-lg">Circuit design, PCB (Printed Circuit Board) layout, and embedded systems</span>
+              <span className="text-lg">Circuit design, PCB (Printed Circuit Board) layout, and embedded systems (small computers built into devices)</span>
             </div>
             <div className="flex items-center gap-3 p-4 bg-green-500/10 rounded-lg border border-green-500/20">
               <Zap size={20} className="text-green-400" />
-              <span className="text-lg">Power distribution and signal processing</span>
+              <span className="text-lg">Power distribution (delivering electricity safely) and signal processing (filtering and analyzing electronic signals)</span>
             </div>
           </div>          <div className="bg-blue-900/20 p-6 rounded-xl mb-6 border-l-4 border-blue-400">
             <h3 className="text-xl font-semibold text-blue-400 mb-3 flex items-center gap-2">
@@ -204,9 +204,8 @@ export default function Engineering() {
             <h3 className="text-xl font-semibold text-blue-400 mb-3 flex items-center gap-2">
               <BookOpen size={20} />
               What to expect:
-            </h3>
-            <p className="text-lg mb-4">Work on prototyping circuits, testing embedded devices, or supporting automation projects.</p>
-            <p className="text-lg">In energy and electronics firms, interns often assist with hardware-software integration or control systems diagnostics.</p>
+            </h3>            <p className="text-lg mb-4">Work on prototyping circuits (building and testing electronic components), testing embedded devices (small computers in everyday products), or supporting automation projects (making machines work automatically).</p>
+            <p className="text-lg">In energy and electronics firms, interns often assist with hardware-software integration (making physical components work with computer programs) or control systems diagnostics (troubleshooting automated systems).</p>
           </div>
 
           <div className="bg-green-900/20 p-6 rounded-xl mb-6 border-l-4 border-green-400">
@@ -257,9 +256,9 @@ export default function Engineering() {
                 Tools commonly used:
               </span>
               <div className="space-y-1 ml-6">
-                <p className="text-lg"><strong>Aspen Plus</strong> - Process simulation software for chemical plants</p>
-                <p className="text-lg"><strong>HYSYS</strong> - Process modeling software for oil, gas, and chemical industries</p>
-                <p className="text-lg"><strong>MATLAB</strong> - Mathematical computing for process analysis</p>
+                <p className="text-lg"><strong>Aspen Plus</strong> - Computer software that helps engineers design and simulate chemical processes</p>
+                <p className="text-lg"><strong>HYSYS</strong> - Software that creates virtual models of oil and gas processing systems</p>
+                <p className="text-lg"><strong>MATLAB</strong> - Mathematical software that helps solve complex problems and analyze data</p>
               </div>
             </div>
             <div className="p-4 bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-lg border border-green-500/20">
@@ -267,12 +266,12 @@ export default function Engineering() {
                 <Target size={18} />
                 Common intern tasks:
               </span>
-              <span className="text-lg">Process simulation, quality assurance (QA), safety compliance, and lab testing</span>
+              <span className="text-lg">Computer modeling of chemical processes, testing product quality, ensuring safety rules are followed, and running laboratory tests</span>
             </div>
           </div>
 
           <div className="bg-yellow-900/20 p-6 rounded-xl mb-6 border-l-4 border-yellow-400">
-            <p className="text-lg">Longer internships can involve work on scale-up, pilot plant studies, or cost optimization</p>
+            <p className="text-lg">Longer internships can involve working on making small-scale processes work at industrial size (scale-up), testing new ideas in small experimental plants (pilot studies), or finding ways to reduce production costs</p>
           </div>
 
           <div className="bg-green-900/20 p-6 rounded-xl mb-6 border-l-4 border-green-400">
@@ -280,8 +279,8 @@ export default function Engineering() {
               <Lightbulb size={20} />
               Why it matters:
             </h3>
-            <p className="text-lg mb-4">Real exposure to manufacturing environments helps you build safety discipline and plant process logic — essential for R&D or production engineering.</p>
-            <p className="text-lg">Chemical engineers are in strong demand in Malaysia's growing palm oil, biofuel, and pharmaceutical industries.</p>
+            <p className="text-lg mb-4">Working in real factories helps you learn important safety practices and understand how production processes work — skills essential for both research and manufacturing jobs.</p>
+            <p className="text-lg">Chemical engineers are in high demand in Malaysia's growing palm oil, biofuel, and pharmaceutical industries.</p>
           </div>
           
           <div className="border-t border-gray-700 pt-4 mt-6">
