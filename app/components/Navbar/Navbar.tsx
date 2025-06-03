@@ -67,8 +67,7 @@ export default function Navbar({ currentView, setCurrentView }: NavbarProps) {
             >
               Contribute
             </button>
-          </>
-        ) : currentView === 'about' ? (
+          </>        ) : currentView === 'about' ? (
           <>
             <button
               onClick={() => {
@@ -102,8 +101,7 @@ export default function Navbar({ currentView, setCurrentView }: NavbarProps) {
               className="hover:text-blue-400 transition-colors duration-200 py-1"
             >
               Contribute
-            </button>
-          </>
+            </button>          </>
         ) : (
           <>
             <button
@@ -126,8 +124,7 @@ export default function Navbar({ currentView, setCurrentView }: NavbarProps) {
               className="hover:text-blue-400 transition-colors duration-200 py-1"
             >
               General Advice
-            </button>
-            <button
+            </button>            <button
               onClick={() => handleNavigation('specific')}
               className="hover:text-blue-400 transition-colors duration-200 py-1"
             >
@@ -138,6 +135,12 @@ export default function Navbar({ currentView, setCurrentView }: NavbarProps) {
               className="hover:text-blue-400 transition-colors duration-200 py-1"
             >
               About Us
+            </button>
+            <button
+              onClick={() => handleNavigation('contribute')}
+              className="hover:text-blue-400 transition-colors duration-200 py-1"
+            >
+              Contribute
             </button>
           </>
         )}
