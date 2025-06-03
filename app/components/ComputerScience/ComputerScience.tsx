@@ -92,8 +92,8 @@ const TableOfContents = () => {
 
   return (
     <div className="hidden lg:block fixed right-4 top-1/2 transform -translate-y-1/2 z-40 group">
-      {/* Tab indicator that's always visible */}
-      <div className="absolute -left-8 top-1/2 -translate-y-1/2 bg-blue-500 hover:bg-blue-600 rounded-l-md p-2 shadow-md cursor-pointer transition-colors duration-300 group-hover:bg-blue-600">
+      {/* Tab indicator moved to bottom */}
+      <div className="absolute -left-8 bottom-4 bg-blue-500 hover:bg-blue-600 rounded-l-md p-2 shadow-md cursor-pointer transition-colors duration-300 group-hover:bg-blue-600">
         <BookOpen size={20} className="text-white" />
       </div>
       
