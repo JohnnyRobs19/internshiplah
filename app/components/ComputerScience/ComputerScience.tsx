@@ -92,15 +92,9 @@ const TableOfContents = () => {
 
   return (
     <div className="hidden lg:block fixed right-4 top-1/2 transform -translate-y-1/2 z-40 group">
-      {/* Tab indicator without icon */}
-      <div className="absolute -left-8 bottom-4 bg-blue-500 hover:bg-blue-600 rounded-l-md p-2 shadow-md cursor-pointer transition-colors duration-300 group-hover:bg-blue-600 w-4">
-        {/* Icon removed */}
-      </div>
-      
-      {/* Main TOC panel that appears on hover */}
-      <div className="bg-slate-800 rounded-2xl shadow-xl border border-gray-700/50 p-4 max-w-xs transform translate-x-[calc(100%-8px)] group-hover:translate-x-0 opacity-90 group-hover:opacity-100 transition-all duration-300 ease-in-out">
+      {/* Main TOC panel that appears on hover - removed tab indicator */}
+      <div className="bg-slate-800 rounded-2xl shadow-xl border border-gray-700/50 p-4 max-w-xs transform translate-x-[calc(100%-16px)] group-hover:translate-x-0 opacity-90 group-hover:opacity-100 transition-all duration-300 ease-in-out">
         <h3 className="text-sm font-semibold text-blue-400 mb-4">
-          {/* Icon removed */}
           Table of Contents
         </h3>
         <nav className="space-y-2">
