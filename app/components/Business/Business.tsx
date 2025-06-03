@@ -60,6 +60,7 @@ const TableOfContents = () => {
     { id: 'elian', title: 'Elian Hilario — Community College to Blackstone', icon: <Building2 size={16} /> },
     { id: 'katie', title: 'Katie Hickman — Spring Internships as Strategic Move', icon: <TrendingUp size={16} /> },
     { id: 'millie', title: 'Millie — Summer Internships for Credit Analysis', icon: <Briefcase size={16} /> },
+    { id: 'insights', title: 'Industry Insights', icon: <TrendingUp size={16} /> },
   ];
 
   useEffect(() => {
@@ -492,7 +493,7 @@ export default function Business() {
         </AdviceBlock>
 
         {/* Industry Insights */}
-        <div className="mt-16 bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-2xl p-8 border border-blue-500/20">
+        <div id="insights" className="mt-16 bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-2xl p-8 border border-blue-500/20 scroll-mt-28">
           <h2 className="text-3xl font-bold text-blue-400 mb-8 text-center flex items-center justify-center gap-3">
             <TrendingUp size={32} />
             Industry Insights
@@ -506,9 +507,12 @@ export default function Business() {
               </div>
               <p className="text-lg mb-3">Over 60% of graduate hires in investment banking are sourced from internship programs.</p>
               <div className="border-t border-gray-700 pt-3">
-                <p className="text-sm text-gray-400 flex items-center gap-2">
-                  <ExternalLink size={12} />
-                  Source: https://www.hsbc.com/careers/students-and-graduates
+                <p className="text-sm text-gray-400">
+                  <span className="flex items-center gap-2 mb-1">
+                    <ExternalLink size={12} />
+                    Source:
+                  </span>
+                  <span className="break-all">https://www.hsbc.com/careers/students-and-graduates</span>
                 </p>
               </div>
             </div>
@@ -520,9 +524,12 @@ export default function Business() {
               </div>
               <p className="text-lg mb-3">More than 70% of finance professionals report getting jobs through referrals or direct networking.</p>
               <div className="border-t border-gray-700 pt-3">
-                <p className="text-sm text-gray-400 flex items-center gap-2">
-                  <ExternalLink size={12} />
-                  Source: https://www.forbes.com/sites/forbescoachescouncil/2023/07/05/referral-hiring-in-finance/
+                <p className="text-sm text-gray-400">
+                  <span className="flex items-center gap-2 mb-1">
+                    <ExternalLink size={12} />
+                    Source:
+                  </span>
+                  <span className="break-all">https://www.forbes.com/sites/forbescoachescouncil/2023/07/05/referral-hiring-in-finance/</span>
                 </p>
               </div>
             </div>
