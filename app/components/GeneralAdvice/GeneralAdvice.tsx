@@ -46,70 +46,6 @@ const AdviceBlock: React.FC<AdviceBlockProps> = ({ id, icon, title, number, chil
   );
 };
 
-// Table of Contents component
-const TableOfContents = () => {
-  const [activeSection, setActiveSection] = useState('');
-
-  const sections = [
-    { id: 'resume', title: 'Craft a Standout Resume', icon: <FileText size={16} /> },
-    { id: 'extracurricular', title: 'Engage in Extracurricular Activities', icon: <Users size={16} /> },
-    { id: 'linkedin', title: 'Build a Professional LinkedIn Profile', icon: <Linkedin size={16} /> },
-    { id: 'industrial-visits', title: 'Participate in Industrial Visits', icon: <Building size={16} /> },
-    { id: 'job-platforms', title: 'Utilize Job Matching Platforms', icon: <Search size={16} /> },
-  ];
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + 200;
-      
-      for (const section of sections) {
-        const element = document.getElementById(section.id);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section.id);
-            break;
-          }
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  return (
-    <div className="hidden lg:block fixed right-4 top-1/2 transform -translate-y-1/2 z-40 group">
-      {/* Main TOC panel that appears on hover */}
-      <div className="bg-slate-800 rounded-2xl shadow-xl border border-gray-700/50 p-4 max-w-xs transform translate-x-[calc(100%-16px)] group-hover:translate-x-0 opacity-90 group-hover:opacity-100 transition-all duration-300 ease-in-out">
-        <h3 className="text-sm font-semibold text-blue-400 mb-4">
-          Table of Contents
-        </h3>
-        <nav className="space-y-2">
-          {sections.map((section) => (
-            <button
-              key={section.id}
-              onClick={() => scrollToSection(section.id)}
-              className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 flex items-center gap-2 ${
-                activeSection === section.id
-                  ? 'bg-blue-500/20 text-blue-400 border-l-2 border-blue-400'
-                  : 'text-gray-400 hover:text-gray-200 hover:bg-gray-700/50'
-              }`}
-            >
-              {section.icon}
-              <span className="truncate">{section.title}</span>
-            </button>
-          ))}
-        </nav>
-      </div>
-    </div>
-  );
-};
-
 // Scroll to Top Button
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -142,13 +78,11 @@ const ScrollToTop = () => {
 export default function GeneralAdvice() {
   return (
     <div className="bg-gray-900 text-gray-300 py-16 px-4 sm:px-6 lg:px-8 relative flex justify-center">
-      {/* Table of Contents */}
-      <TableOfContents />
-      
-      {/* Scroll to Top */}
-      <ScrollToTop />
-
       <div className="w-full max-w-5xl lg:max-w-4xl xl:max-w-5xl">
+        
+        {/* Scroll to Top */}
+        <ScrollToTop />
+
         <div className="text-center mb-16">
           <div className="flex justify-center mb-6">
             <div className="p-4 bg-blue-500/10 rounded-2xl border border-blue-500/20">
@@ -267,7 +201,7 @@ export default function GeneralAdvice() {
                 <FileText size={18} className="text-green-400" />
               </div>
               <div>
-                <h3 className="text-lg font-medium text-green-400 mb-1">Detailed Experience</h3>
+                <h3 className="text-lg font-medium text-green-400 mb-1">Experience & Projects</h3>
                 <p>Include internships, part-time roles, and meaningful projects with well-written descriptions.</p>
               </div>
             </div>

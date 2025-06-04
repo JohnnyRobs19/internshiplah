@@ -91,8 +91,8 @@ const TableOfContents = () => {
   };
 
   return (
-    <div className="hidden lg:block fixed right-4 top-1/2 transform -translate-y-1/2 z-40 group">
-      <div className="bg-slate-800 rounded-2xl shadow-xl border border-gray-700/50 p-4 max-w-xs transform translate-x-[calc(100%-16px)] group-hover:translate-x-0 opacity-90 group-hover:opacity-100 transition-all duration-300 ease-in-out">
+    <div className="hidden lg:block sticky top-24 float-right ml-4 z-40">
+      <div className="bg-slate-800 rounded-2xl shadow-xl border border-gray-700/50 p-4 max-w-xs opacity-90 hover:opacity-100 transition-all duration-300 ease-in-out">
         <h3 className="text-sm font-semibold text-blue-400 mb-4">
           Table of Contents
         </h3>
@@ -106,9 +106,10 @@ const TableOfContents = () => {
                   ? 'bg-blue-500/20 text-blue-400 border-l-2 border-blue-400'
                   : 'text-gray-400 hover:text-gray-200 hover:bg-gray-700/50'
               }`}
+              title={section.title}
             >
               {section.icon}
-              {section.title}
+              <span className="truncate">{section.title}</span>
             </button>
           ))}
         </nav>
@@ -149,13 +150,13 @@ const ScrollToTop = () => {
 export default function Law() {
   return (
     <div className="bg-gray-900 text-gray-300 py-16 px-4 sm:px-6 lg:px-8 relative flex justify-center">
-      {/* Table of Contents */}
-      <TableOfContents />
-      
-      {/* Scroll to Top */}
-      <ScrollToTop />
-
       <div className="w-full max-w-5xl lg:max-w-4xl xl:max-w-5xl">
+        {/* Table of Contents */}
+        <TableOfContents />
+        
+        {/* Scroll to Top */}
+        <ScrollToTop />
+
         <div className="text-center mb-16">
           <div className="flex justify-center mb-6">
             <div className="p-4 bg-blue-500/10 rounded-2xl border border-blue-500/20">
@@ -167,8 +168,7 @@ export default function Law() {
           </h1>
           <div className="max-w-4xl mx-auto bg-gradient-to-r from-slate-800 to-slate-700 rounded-2xl shadow-xl overflow-hidden p-8 mb-10 border border-gray-700/50">
             <p className="text-xl mb-8 leading-relaxed">
-              Internships in law are competitive — especially at top firms. But even if you're starting from zero, 
-              you can stand out with smart preparation and real strategies. This guide will show you exactly how to 
+              You can stand out with smart preparation and real strategies. This guide will show you exactly how to 
               navigate the journey from law student to legal intern, with clear steps and real examples.
             </p>
           </div>

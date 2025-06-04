@@ -50,71 +50,6 @@ const AdviceBlock: React.FC<AdviceBlockProps> = ({ id, icon, title, number, chil
   );
 };
 
-// Table of Contents component
-const TableOfContents = () => {
-  const [activeSection, setActiveSection] = useState('');
-
-  const sections = [
-    { id: 'abigayle', title: 'Abigayle Peterson — 8 Offers Through Networking', icon: <Network size={16} /> },
-    { id: 'yike', title: 'Yi Ke Cao — Started at 16 with a Hedge Fund', icon: <DollarSign size={16} /> },
-    { id: 'elian', title: 'Elian Hilario — Community College to Blackstone', icon: <Building2 size={16} /> },
-    { id: 'katie', title: 'Katie Hickman — Spring Internships as Strategic Move', icon: <TrendingUp size={16} /> },
-    { id: 'millie', title: 'Millie — Summer Internships for Credit Analysis', icon: <Briefcase size={16} /> },
-    { id: 'insights', title: 'Industry Insights', icon: <TrendingUp size={16} /> },
-  ];
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + 200;
-      
-      for (const section of sections) {
-        const element = document.getElementById(section.id);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section.id);
-            break;
-          }
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  return (
-    <div className="hidden lg:block fixed right-4 top-1/2 transform -translate-y-1/2 z-40 group">
-      {/* Main TOC panel that appears on hover */}
-      <div className="bg-slate-800 rounded-2xl shadow-xl border border-gray-700/50 p-4 max-w-xs transform translate-x-[calc(100%-16px)] group-hover:translate-x-0 opacity-90 group-hover:opacity-100 transition-all duration-300 ease-in-out">
-        <h3 className="text-sm font-semibold text-blue-400 mb-4">
-          Table of Contents
-        </h3>
-        <nav className="space-y-2">
-          {sections.map((section) => (
-            <button
-              key={section.id}
-              onClick={() => scrollToSection(section.id)}
-              className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 flex items-center gap-2 ${
-                activeSection === section.id
-                  ? 'bg-blue-500/20 text-blue-400 border-l-2 border-blue-400'
-                  : 'text-gray-400 hover:text-gray-200 hover:bg-gray-700/50'
-              }`}
-            >
-              {section.icon}
-              <span className="truncate">{section.title.split(' — ')[0]}</span>
-            </button>
-          ))}
-        </nav>
-      </div>
-    </div>
-  );
-};
-
 // Scroll to Top Button
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -147,8 +82,6 @@ const ScrollToTop = () => {
 export default function Business() {
   return (
     <div className="bg-gray-900 text-gray-300 py-16 px-4 sm:px-6 lg:px-8 relative flex justify-center">
-      {/* Table of Contents */}
-      <TableOfContents />
       
       {/* Scroll to Top */}
       <ScrollToTop />
