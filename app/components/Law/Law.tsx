@@ -53,71 +53,6 @@ const AdviceBlock: React.FC<AdviceBlockProps> = ({ id, icon, title, number, chil
   );
 };
 
-// Table of Contents component
-const TableOfContents = () => {
-  const [activeSection, setActiveSection] = useState('');
-
-  const sections = [
-    { id: 'gameplan', title: 'Year-by-Year Game Plan', icon: <Calendar size={16} /> },
-    { id: 'cold-email', title: 'Cold Email Template', icon: <Mail size={16} /> },
-    { id: 'interview', title: 'Interview Preparation', icon: <MessageCircle size={16} /> },
-    { id: 'experiences', title: 'Real Student Voices', icon: <Users size={16} /> },
-    { id: 'application', title: 'Application Requirements', icon: <FileText size={16} /> },
-    { id: 'resources', title: 'Resources & Industry Insights', icon: <Target size={16} /> },
-  ];
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + 200;
-      
-      for (const section of sections) {
-        const element = document.getElementById(section.id);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section.id);
-            break;
-          }
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  return (
-    <div className="hidden lg:block sticky top-24 float-right ml-4 z-40">
-      <div className="bg-slate-800 rounded-2xl shadow-xl border border-gray-700/50 p-4 max-w-xs opacity-90 hover:opacity-100 transition-all duration-300 ease-in-out">
-        <h3 className="text-sm font-semibold text-blue-400 mb-4">
-          Table of Contents
-        </h3>
-        <nav className="space-y-2">
-          {sections.map((section) => (
-            <button
-              key={section.id}
-              onClick={() => scrollToSection(section.id)}
-              className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 flex items-center gap-2 ${
-                activeSection === section.id
-                  ? 'bg-blue-500/20 text-blue-400 border-l-2 border-blue-400'
-                  : 'text-gray-400 hover:text-gray-200 hover:bg-gray-700/50'
-              }`}
-              title={section.title}
-            >
-              {section.icon}
-              <span className="truncate">{section.title}</span>
-            </button>
-          ))}
-        </nav>
-      </div>
-    </div>
-  );
-};
-
 // Scroll to Top Button
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -151,8 +86,6 @@ export default function Law() {
   return (
     <div className="bg-gray-900 text-gray-300 py-16 px-4 sm:px-6 lg:px-8 relative flex justify-center">
       <div className="w-full max-w-5xl lg:max-w-4xl xl:max-w-5xl">
-        {/* Table of Contents */}
-        <TableOfContents />
         
         {/* Scroll to Top */}
         <ScrollToTop />
